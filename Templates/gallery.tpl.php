@@ -1,6 +1,7 @@
 <section class="headroom">
     <div class="row" data-equalizer>
         <?php $imgdir = '/images/' . \Source\Model\Site::getInstance()->imagedir . '/gallery/'; ?>
+        <?php $index = 0; ?>
         <?php foreach ($gallery->getImages() as $image): ?>
             <div class="small-6 medium-3 column left">
                 <div class="gallery-item" data-equalizer-watch>
