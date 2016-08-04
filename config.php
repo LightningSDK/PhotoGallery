@@ -12,7 +12,4 @@ return [
             'admin/images' => 'Modules\\PhotoGallery\\Pages\\AdminImages',
         ]
     ],
-    'overridable' => [
-        'Modules\\PhotoGallery\\Model\\Gallery' => 'Overridable\\Modules\\PhotoGallery\\Model\\Gallery',
-    ]
 ];

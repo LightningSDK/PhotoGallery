@@ -1,11 +1,11 @@
 <?php
 
-namespace Overridable\Modules\PhotoGallery\Model;
+namespace Modules\PhotoGallery\Model;
 
 use Lightning\Model\Object;
 use Lightning\Tools\Database;
 
-class Gallery extends Object {
+class GalleryOverridable extends Object {
 
     const TABLE = 'photo_gallery';
     const PRIMARY_KEY = 'gallery_id';
