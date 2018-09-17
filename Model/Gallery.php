@@ -10,11 +10,31 @@ class GalleryOverridable extends Object {
     const TABLE = 'photo_gallery';
     const PRIMARY_KEY = 'gallery_id';
 
+    protected $images = null;
+
+    /**
+     * @throws \Exception
+     */
+    public function loadImages() {
+        $this->images = Database::getInstance()->selectAll('photo_gallery_image', ['gallery_id' => $this->id]);
+    }
+
+    /**
+     * $images is an array of arrays. The arrays contained in images should represent a row from the
+     * photo_gallery_image table: image_id (not required), gallery_id (not required), image (url without extension),
+     * title, and description.
+     *
+     * @param array $images
+     */
+    public function setImages($images) {
+        $this->images = $images;
+    }
+
     public function getImages() {
-        static $images = null;
-        if ($images === null) {
-            $images = Database::getInstance()->selectAll('photo_gallery_image', ['gallery_id' => $this->id]);
+        if ($this->images === null) {
+            $this->loadImages();
         }
-        return $images;
+
+        return $this->images;
     }
 }
