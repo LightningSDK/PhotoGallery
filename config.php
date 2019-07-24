@@ -7,7 +7,7 @@ return [
     ],
     'routes' => [
         'static' => [
-            'gallery' => \Modules\PhotoGallery\Pages\GalleryView::class,
+            'gallery' => \Modules\PhotoGallery\Pages\Gallery::class,
             'admin/galleries' => \Modules\PhotoGallery\Pages\AdminGalleries::class,
             'admin/images' => \Modules\PhotoGallery\Pages\AdminImages::class,
         ]
