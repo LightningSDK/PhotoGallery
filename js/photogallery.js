@@ -7,16 +7,17 @@
         pswp: null,
         gallery: null,
 
-        defaultWidth: 0,
-        defaultHeight: 0,
+        defaultWidth: 300,
+        defaultHeight: 300,
 
         init: function () {
             var items = [];
             $('.gallery-item').each(function(){
-                var img = $(this).find('img');
+                var img = $(this).find('figure');
                 if (img.length > 0) {
+                    var id = img.find('img').first().data('index');
                     items.push({
-                        src: img.attr('src').replace('-s.jpg', '-l.jpg'),
+                        src: img.find('.show-link').first().data('href'),
                         w: self.defaultWidth,
                         h: self.defaultHeight
                     });
@@ -97,5 +98,5 @@
 
             self.pswp.items = newImages;
         }
-    }
+    };
 })();

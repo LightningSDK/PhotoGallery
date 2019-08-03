@@ -9,20 +9,22 @@ use \Modules\ImageManager\Model\Image;
         <?php foreach ($gallery->getImages() as $image): ?>
             <div class="small-6 medium-3 column left">
                 <div class="gallery-item" data-equalizer-watch>
-                    <div class="gallery-image">
-                        <a href="<?=Image::getImage($image['image'], 1000, \Lightning\Tools\Image::FORMAT_JPG);?>" data-index="<?=$index++;?>" itemprop="contentUrl" data-size="600x400">
+                    <figure class="gallery-image">
+                        <span data-href="<?=Image::getImage($image['image'], 1000, \Lightning\Tools\Image::FORMAT_JPG);?>" itemprop="contentUrl" class="show-link">
                             <img src="<?=Image::getImage($image['image'], 250, \Lightning\Tools\Image::FORMAT_JPG);?>" data-index="<?=$index++;?>" style="padding-top:10px;" alt="<?=$image['description'];?>" />
-                        </a>
-                    </div>
-                    <?php if (!empty($image['title'])): ?>
-                        <h3><?=$image['title'];?></h3>
-                    <?php endif; ?>
-                    <?php if (!empty($image['title']) && !empty($image['description'])): ?>
-                        <br>
-                    <?php endif; ?>
-                    <?php if (!empty($image['description'])): ?>
-                        <?=$image['description'];?>
-                    <?php endif; ?>
+                        </span>
+                        <figcaption>
+                            <?php if (!empty($image['title'])): ?>
+                                <h3><?=$image['title'];?></h3>
+                            <?php endif; ?>
+                            <?php if (!empty($image['title']) && !empty($image['description'])): ?>
+                                <br>
+                            <?php endif; ?>
+                            <?php if (!empty($image['description'])): ?>
+                                <?=$image['description'];?>
+                            <?php endif; ?>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         <?php endforeach; ?>
