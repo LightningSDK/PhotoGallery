@@ -12,4 +12,11 @@ class AdminGalleries extends Table {
     public function hasAccess() {
         return ClientUser::requireAdmin();
     }
+
+    public function initSettings() {
+        $this->action_fields['edit_images'] = [
+            'type' => 'link',
+            'url' => '/admin/galleries/images?gallery_id=',
+        ];
+    }
 }

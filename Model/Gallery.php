@@ -4,6 +4,7 @@ namespace Modules\PhotoGallery\Model;
 
 use Lightning\Model\Object;
 use Lightning\Tools\Database;
+use Lightning\Tools\IO\FileManager;
 
 class GalleryOverridable extends Object {
 
@@ -17,6 +18,10 @@ class GalleryOverridable extends Object {
      */
     public function loadImages() {
         $this->images = Database::getInstance()->selectAll('photo_gallery_image', ['gallery_id' => $this->id]);
+        $fileHandler = FileManager::getFileHandler('', 'images');
+        foreach ($this->images as &$i) {
+            $i['image'] = $fileHandler->getWebURL($i['image']);
+        }
     }
 
     /**
