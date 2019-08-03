@@ -7,17 +7,18 @@
         pswp: null,
         gallery: null,
 
-        defaultWidth: 300,
-        defaultHeight: 300,
+        defaultWidth: 0,
+        defaultHeight: 0,
 
         init: function () {
             var items = [];
             $('.gallery-item').each(function(){
                 var img = $(this).find('figure');
                 if (img.length > 0) {
-                    var id = img.find('img').first().data('index');
+                    var link = img.find('.show-link').first();
+                    var id = link.data('index');
                     items.push({
-                        src: img.find('.show-link').first().data('href'),
+                        src: link.data('href'),
                         w: self.defaultWidth,
                         h: self.defaultHeight
                     });
@@ -43,7 +44,7 @@
                 self.show();
             }
 
-            $('.gallery-image').on('click', 'img', function(){
+            $('.photogallery').on('click', '.show-link', function(){
                 self.pswp.options.index = $(this).data('index');
                 self.show();
             });
