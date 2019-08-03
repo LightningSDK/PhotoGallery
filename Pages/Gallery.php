@@ -13,6 +13,8 @@ class Gallery extends Page {
 
     protected $page = ['gallery', 'PhotoGallery'];
 
+    protected $rightColumn = false;
+
     public function hasAccess() {
         return true;
     }

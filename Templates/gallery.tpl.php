@@ -9,7 +9,7 @@ use \Modules\ImageManager\Model\Image;
         <?php foreach ($gallery->getImages() as $image): ?>
             <div class="small-6 medium-3 column left">
                 <div class="gallery-item" data-equalizer-watch>
-                    <figure class="gallery-image">
+                    <figure class="gallery-image" style="margin:0;">
                         <span data-href="<?=Image::getImage($image['image'], 1000, \Lightning\Tools\Image::FORMAT_JPG);?>" itemprop="contentUrl" class="show-link">
                             <img src="<?=Image::getImage($image['image'], 250, \Lightning\Tools\Image::FORMAT_JPG);?>" data-index="<?=$index++;?>" style="padding-top:10px;" alt="<?=$image['description'];?>" />
                         </span>
