@@ -13,6 +13,18 @@ class GalleryOverridable extends Object {
 
     protected $images = null;
 
+    public static function loadBySlug($slug) {
+        $galleries = self::loadByQuery([
+            'where' => [
+                'slug' => $slug,
+            ],
+        ]);
+        if (!empty($galleries)) {
+            return $galleries[0];
+        }
+        return null;
+    }
+
     /**
      * @throws \Exception
      */

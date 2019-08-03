@@ -26,6 +26,9 @@ class Gallery extends Page {
         if ($id = Request::get('id', Request::TYPE_INT)) {
             $gallery = GalleryModel::loadById($id);
         }
+        elseif ($slug = Request::getFromURL('/gallery\/(.*)/')) {
+            $gallery = GalleryModel::loadBySlug($slug);
+        }
 
         if (empty($gallery)) {
             throw new Exception('Gallery not found.');
