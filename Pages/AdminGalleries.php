@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\PhotoGallery\Pages;
+namespace lightningsdk\photogallery\Pages;
 
 use Lightning\Pages\Table;
 use Lightning\Tools\ClientUser;

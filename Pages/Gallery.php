@@ -1,13 +1,13 @@
 <?php
 
-namespace Modules\PhotoGallery\Pages;
+namespace lightningsdk\photogallery\Pages;
 
 use Exception;
 use Lightning\Tools\Request;
 use Lightning\Tools\Template;
 use Lightning\View\Page;
-use Modules\PhotoGallery\Model\Gallery as GalleryModel;
-use Modules\PhotoGallery\View\Gallery as GalleryView;
+use lightningsdk\photogallery\Model\Gallery as GalleryModel;
+use lightningsdk\photogallery\View\Gallery as GalleryView;
 
 class Gallery extends Page {
 

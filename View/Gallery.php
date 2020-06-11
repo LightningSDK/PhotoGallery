@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\PhotoGallery\View;
+namespace lightningsdk\photogallery\View;
 
 use Lightning\View\CSS;
 use Lightning\View\JS;

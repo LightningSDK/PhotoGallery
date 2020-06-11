@@ -1,5 +1,5 @@
 <?php
-use \Modules\ImageManager\Model\Image;
+use \lightningsdk\imagemanager\Model\Image;
 ?>
 
 <section class="headroom">
