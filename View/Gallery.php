@@ -2,8 +2,8 @@
 
 namespace lightningsdk\photogallery\View;
 
-use Lightning\View\CSS;
-use Lightning\View\JS;
+use lightningsdk\core\View\CSS;
+use lightningsdk\core\View\JS;
 
 class Gallery {
     public static function init() {

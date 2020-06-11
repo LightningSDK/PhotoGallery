@@ -10,7 +10,7 @@ use \lightningsdk\imagemanager\Model\Image;
                 <?php foreach ($gallery->getImages() as $image): ?>
                 <li class="gallery-item">
                     <figure class="gallery-image" style="margin:0;padding-top:10px;" alt="<?=$image['description'];?>)">
-                        <div data-href="<?=Image::getImage($image['image'], 1000, \Lightning\Tools\Image::FORMAT_JPG);?>" itemprop="contentUrl" class="show-link cover" data-index="<?=$index++;?>" style="background-image:url(<?=Image::getImage($image['image'], 250, \Lightning\Tools\Image::FORMAT_JPG);?>);min-height:200px;">
+                        <div data-href="<?=Image::getImage($image['image'], 1000, \lightningsdk\core\Tools\Image::FORMAT_JPG);?>" itemprop="contentUrl" class="show-link cover" data-index="<?=$index++;?>" style="background-image:url(<?=Image::getImage($image['image'], 250, \lightningsdk\core\Tools\Image::FORMAT_JPG);?>);min-height:200px;">
                         </div>
                         <figcaption>
                             <?php if (!empty($image['title'])): ?>

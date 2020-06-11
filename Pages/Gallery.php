@@ -3,9 +3,9 @@
 namespace lightningsdk\photogallery\Pages;
 
 use Exception;
-use Lightning\Tools\Request;
-use Lightning\Tools\Template;
-use Lightning\View\Page;
+use lightningsdk\core\Tools\Request;
+use lightningsdk\core\Tools\Template;
+use lightningsdk\core\View\Page;
 use lightningsdk\photogallery\Model\Gallery as GalleryModel;
 use lightningsdk\photogallery\View\Gallery as GalleryView;
 

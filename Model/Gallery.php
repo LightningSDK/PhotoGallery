@@ -2,9 +2,9 @@
 
 namespace lightningsdk\photogallery\Model;
 
-use Lightning\Model\BaseObject;
-use Lightning\Tools\Database;
-use Lightning\Tools\IO\FileManager;
+use lightningsdk\core\Model\BaseObject;
+use lightningsdk\core\Tools\Database;
+use lightningsdk\core\Tools\IO\FileManager;
 
 class GalleryOverridable extends BaseObject {
 

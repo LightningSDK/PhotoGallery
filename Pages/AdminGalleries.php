@@ -2,8 +2,8 @@
 
 namespace lightningsdk\photogallery\Pages;
 
-use Lightning\Pages\Table;
-use Lightning\Tools\ClientUser;
+use lightningsdk\core\Pages\Table;
+use lightningsdk\core\Tools\ClientUser;
 
 class AdminGalleries extends Table {
     const TABLE = 'photo_gallery';
