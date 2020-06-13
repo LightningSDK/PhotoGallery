@@ -11,7 +11,7 @@ use lightningsdk\photogallery\View\Gallery as GalleryView;
 
 class Gallery extends Page {
 
-    protected $page = ['gallery', 'PhotoGallery'];
+    protected $page = ['gallery', 'lightningsdk/photogallery'];
 
     protected $rightColumn = false;
 
