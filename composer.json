@@ -2,8 +2,5 @@
   "name": "lightningsdk/photogallery",
   "type": "library",
   "description": "Adds photo gallery based on photoswipe.",
-  "version": "1.0.0",
-  "require": {
-    "lightningsdk/core": "dev-php7.3"
-  }
+  "version": "1.0.0"s
 }
