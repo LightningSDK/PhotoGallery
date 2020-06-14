@@ -4,7 +4,7 @@ use \lightningsdk\imagemanager\Model\Image;
 
 <section class="headroom">
     <div class="row photogallery">
-        <?php $imgdir = '/images/' . \Source\Model\Site::getInstance()->imagedir . '/gallery/'; ?>
+        <?php $imgdir = '/images/' . \lightningsdk\Model\Site::getInstance()->imagedir . '/gallery/'; ?>
         <?php $index = 0; ?>
             <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-5">
                 <?php foreach ($gallery->getImages() as $image): ?>
