@@ -1,8 +1,5 @@
 (function() {
-    if (lightning.modules.photogallery) {
-        return;
-    }
-    var self = lightning.modules.photogallery = {
+    var self = {
 
         pswp: null,
         gallery: null,
@@ -100,4 +97,5 @@
             self.pswp.items = newImages;
         }
     };
+    lightning.js.addModule("photogallery", self)
 })();

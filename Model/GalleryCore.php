@@ -14,7 +14,7 @@ class GalleryCore extends BaseObject {
     protected $images = null;
 
     public static function loadBySlug($slug) {
-        $galleries = self::loadByQuery([
+        $galleries = static::loadByQuery([
             'where' => [
                 'slug' => $slug,
             ],
